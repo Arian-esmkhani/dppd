@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/userq.css">
+    <title>وقتشه بشناسمت</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container-n">
+                <a href="#" class="logo">dppd</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container-m">
+            <h2>پاسخ بده</h2>
+            <form>
+                <div class="form-group">
+                    <label for="study-hours">ساعت مطالعه (0 تا 16)</label>
+                    <input type="number" id="study-hours" name="study-hours" min="0" max="16" required>
+                </div>
+                <div class="form-group">
+                    <label for="previous-units">واحد های ترم قبل (14 تا 26)</label>
+                    <input type="number" id="previous-units" name="previous-units" min="14" max="24" required>
+                </div>
+                <div class="form-group">
+                    <label for="current-units">واحد های این ترم  (14 تا 26)</label>
+                    <input type="number" id="current-units" name="current-units" min="14" max="24" required>
+                </div>
+                <div class="form-group">
+                    <label for="daily-tasks">زمان صرف شده بری کار های روزانه (0 تا 16)</label>
+                    <input type="number" id="daily-tasks" name="daily-tasks" min="0" max="16" required>
+                </div>
+                <div class="form-group">
+                    <label for="daily-university">روز های حضور در دانشگاه در هفته(0 تا 6 )</label>
+                    <input type="number" id="daily-university" name="daily-university" min="1" max="6" required>
+                </div>
+                <div class="form-group">
+                    <label for="perfer-resources">منبع درسی مورد علاقه</label>
+                    <select name="perfer-resources" id="perfer-resources" required>
+                        <option value="book">کتاب</option>
+                        <option value=Brochre">جزوه</option>
+                        <option value="video">ویدیو</option>
+                    </select>
+                    <label for="study-mode">نحوه تحصیل</label>
+                    <select name="study-mode" id="study-mode" required>
+                        <option value="inperson">حضوری</option>
+                        <option value="unperson">غیر حضوری</option>
+                    </select>
+                </div>
+                <button type="submit">بزن بریم</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="container-f">
+            <h3>dppd</h3>
+        </div>
+    </footer>
+</body>
+</html>
