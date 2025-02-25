@@ -1,0 +1,82 @@
+body {
+    background-color: blanchedalmond;
+    font-family: 'Vazir', Tahoma, sans-serif;
+    height:40.7em;
+    margin: 0;
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+}
+
+.signup-continer {
+    background-color: rgba(190, 189, 189, 0.897);
+    backdrop-filter: blur(1em);
+    color: #062641c4;
+    font-style: oblique;
+    border: 0.2em solid rgba(145, 145, 13, 0.671);
+    box-shadow: 0px 0.3em 0.8em rgba(145, 145, 13, 0.671);
+    border-radius: 0.8em;
+    border-top-right-radius: 3em;
+    height: 38em;
+    width: 22.4em;
+    text-align: center;
+    margin-top: 6.6em;
+}
+
+.signup-continer h2{
+    text-shadow: 0 0.1em 0.3em rgba(145, 145, 13, 0.671);
+    margin-bottom: 3.8em;
+    margin-top: 2em;
+}
+
+.form-group {
+    margin-bottom: 2.17em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.form-group input {
+    border: 0.17em solid rgba(145, 145, 13, 0.671);
+    border-radius: 1em;
+    background-color: rgba(229, 239, 247, 0.493);
+    width: 80%;
+    padding: 0.34em;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: rgba(229, 239, 247, 0.493);
+    border: 0.17em solid rgba(145, 145, 13, 0.671);
+    border-radius: 1em;
+    color: #062641c4;
+    width: 24%;
+    padding: 0.34em;
+    margin-top: 0.8em;
+    cursor: pointer
+}
+
+button:hover {
+    background-color: #0626415e;
+}
+
+.login-link {
+    margin-top: 2.9em;
+    margin-left: 1.8em;
+}
+
+.login-link p{
+    color: #062641c4;
+}
+
+.login-link a {
+    color: #25547ae3;
+    text-decoration: none;
+    margin-right: 1em;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
