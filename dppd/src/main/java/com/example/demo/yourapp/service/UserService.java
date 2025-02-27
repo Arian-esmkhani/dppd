@@ -1,4 +1,4 @@
-package com.example.dppd.service;
+package com.example.demo.yourapp.service;
 
 import com.example.dppd.model.LoginHistory;
 import com.example.dppd.model.User;
@@ -52,7 +52,7 @@ public class UserService implements org.springframework.security.core.userdetail
         // ثبت تاریخچه ورود
         LoginHistory loginHistory = new LoginHistory();
         loginHistory.setLoginTime(LocalDateTime.now());
-        loginHistory.setUser(user);
+        loginHistory.setUser(user); // تنظیم رابطه با کاربر
         loginHistoryRepository.save(loginHistory);
 
         return user;

@@ -1,38 +1,32 @@
-package com.example.dppd.model;
+package com.example.demo.yourapp.model;
 
-import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "users_base")
+@Table(name = "users_login")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "users_id")
     private Long id;
 
-    @Column(name = "users_name", unique = true, nullable = false)
+    @Column(name = "users_name", unique = true, nullable = false, length = 30)
     private String username;
 
-    @Column(name = "password_hash", nullable = false)
+    @Column(name = "password_hash", nullable = false length = 20)
     private String password;
 
-    @Column(name = "users_email", unique = true, nullable = false)
+    @Column(name = "users_email", nullable = true length = 55)
     private String email;
 
-    // رابطه یک-به-چند با جدول users_login
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<LoginHistory> loginHistories = new ArrayList<>();
-
-    // Constructors, Getters, and Setters
-    public User() {}
-
-    public User(String username, String password, String email) {
+    public User(String username, String password, String email, LocalDateTime loginTime) {
         this.username = username;
         this.password = password;
         this.email = email;
     }
+
 
     // Getters and Setters
     public Long getId() {
@@ -67,11 +61,6 @@ public class User {
         this.email = email;
     }
 
-    public List<LoginHistory> getLoginHistories() {
-        return loginHistories;
-    }
-
-    public void setLoginHistories(List<LoginHistory> loginHistories) {
-        this.loginHistories = loginHistories;
-    }
+    public List<LoginHistory> getLoginHistories() { return loginHistories; }
+    public void setLoginHistories(List<LoginHistory> loginHistories) { this.loginHistories = loginHistories; }
 }

@@ -1,6 +1,6 @@
 package com.example.demo.yourapp.config;
 
-import com.example.dppd.service.UserService;
+import com.example.demo.yourapp.service.UserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -30,7 +30,7 @@ public class SecurityConfig {
                 .csrf().disable()
                 .authorizeHttpRequests(auth -> auth
                         // اجازه دسترسی به مسیرهای عمومی
-                        .requestMatchers("/api/auth/signup", "/api/auth/login").permitAll()
+                        .requestMatchers("/","/api/auth/signup", "/api/auth/login").permitAll()
                         // نیاز به احراز هویت برای سایر مسیرها
                         .anyRequest().authenticated()
                 )

@@ -1,20 +1,39 @@
-package com.example.yourapp.controller;
+package com.example.demo.yourapp.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.stereotype.Controller;
-import com.example.yourapp.model.User;
-import com.example.yourapp.service.UserService;
+import com.example.demo.yourapp.model.User;
+import com.example.demo.yourapp.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.example.dppd.dto.LoginRequest;
+import com.example.demo.yourapp.dto.LoginRequest;
 
 @Controller
 public class HelloController {
 
-    @GetMapping("/main")
-    public String mainPage() {
+    @GetMapping("/")
+    public String homePage() {
 
-        return "main";
+        return "index";
+    }
+}
+
+@Controller
+public class SignupController {
+
+    @GetMapping("/signup")
+    public String signPage() {
+
+        return "sign";
+    }
+}
+
+@Controller
+public class LoginController {
+
+    @GetMapping("/login")
+    public String logPage() {
+
+        return "loggin";
     }
 }
 

@@ -1,16 +1,13 @@
-package com.example.dppd.repository;
+package com.example.demo.yourapp.repository;
 
-import com.example.dppd.model.LoginHistory;
+import com.example.demo.yourapp.model.LoginHistory;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Repository
 public interface LoginHistoryRepository extends JpaRepository<LoginHistory, Long> {
-
-    // یافتن تمام لاگین‌های یک کاربر خاص بر اساس users_id
     List<LoginHistory> findByUser_Id(Long userId);
-
-    // یافتن لاگین‌ها در بازه زمانی مشخص
     List<LoginHistory> findByLoginTimeBetween(LocalDateTime start, LocalDateTime end);
 }
