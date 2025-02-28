@@ -1,9 +1,9 @@
 package com.example.demo.yourapp.service;
 
-import com.example.dppd.model.LoginHistory;
-import com.example.dppd.model.User;
-import com.example.dppd.repository.LoginHistoryRepository;
-import com.example.dppd.repository.UserRepository;
+import com.example.demo.yourapp.model.LoginHistory;
+import com.example.demo.yourapp.model.User;
+import com.example.demo.yourapp.repository.LoginHistoryRepository;
+import com.example.demo.yourapp.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;

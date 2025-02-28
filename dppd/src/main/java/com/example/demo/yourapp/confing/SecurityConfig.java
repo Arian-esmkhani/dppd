@@ -27,10 +27,18 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                .cors().configurationSource(request -> {
+                    CorsConfiguration config = new CorsConfiguration();
+                    config.setAllowedOrigins(List.of("*")); // اجازه دسترسی از همه دامنه‌ها
+                    config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")); // اجازه متدهای HTTP
+                    config.setAllowedHeaders(List.of("*")); // اجازه همه هدرها
+                    return config;
+                })
+                .and()
                 .csrf().disable()
                 .authorizeHttpRequests(auth -> auth
                         // اجازه دسترسی به مسیرهای عمومی
-                        .requestMatchers("/","/api/auth/signup", "/api/auth/login").permitAll()
+                        .requestMatchers("/","/api/auth/signup", "/api/auth/login", "/static/**", "/css/**", "/js/**", "/images/**").permitAll()
                         // نیاز به احراز هویت برای سایر مسیرها
                         .anyRequest().authenticated()
                 )
