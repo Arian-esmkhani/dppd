@@ -1,0 +1,13 @@
+{
+    "build": {
+        "builder": "nixpacks",
+        "builder": "./gradlew clean bpptJar"
+    },
+    "deploy": {
+        "startCommand": "java -jar build/libs.app.jar",
+        "healthcheckPath": "/",
+        "healthcheckTimeout": 200,
+        "restartPolicyType": "ON_FAILURE",
+        "restartPolicyMaxRetries": 10
+    }
+}
